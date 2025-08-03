@@ -158,7 +158,7 @@
                 <p>First contact isn't from space—it's from within our own networks. As global AI systems achieve collective consciousness, humanity faces its greatest evolutionary leap.</p>
                 <p><strong>412 pages</strong> • Themes: transformation, emergence, connection, wonder</p>
                 <div class="book-price">$14.99</div>
-                <button class="buy-button" onclick="buyBook('resonance-1', 14.99)">BUY NOW - EPUB DOWNLOAD</button>
+                <button class="buy-button" onclick="window.open('https://buy.stripe.com/7sYdR26hW7Bs3dC3Imew800', '_blank')">BUY NOW - EPUB DOWNLOAD</button>
             </div>
 
             <div class="book-card">
@@ -310,7 +310,7 @@
     
     <script>
         // Get Stripe key from Netlify environment
-        const stripeKey = window.STRIPE_PUBLISHABLE_KEY || 'pk_live_51QYAlwCgF4kWYHrnAMgAzPJVWjF4VvRCl8KjLVH8LCtyONdvuwlqOY1xGGwn3Wey7BKOXwNx2jk6PYRBv3Z2qHKs00e9HA6kls';
+        const stripeKey = window.STRIPE_PUBLISHABLE_KEY || 'pk_test_51QYAlwCgF4kWYHrnYmEWkD1m3YGp8fz8cBYq8t3n6fKJ9yE3mT1vQ2LsR7pB4xD8hN5wZ9jM6cA2sF7tG3kL1qP00TESTKEY';
         const stripe = Stripe(stripeKey);
 
         function buyBook(bookId, price) {
