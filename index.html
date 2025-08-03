@@ -323,7 +323,7 @@
         async function createCheckoutSession(bookId, price) {
             try {
                 // Create checkout session
-                const response = await fetch('/.netlify/functions/create-checkout', {
+                const response = await fetch('https://jimmy-store.netlify.app/.netlify/functions/create-checkout', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
