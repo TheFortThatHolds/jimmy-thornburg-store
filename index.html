@@ -339,6 +339,7 @@
                 }
                 
                 const session = await response.json();
+                console.log('Function response:', session);
                 
                 // Redirect to Stripe checkout
                 const result = await stripe.redirectToCheckout({
