@@ -1,0 +1,30 @@
+{
+  "name": "jimmy-thornburg-sovereign-store",
+  "version": "1.0.0",
+  "description": "Jimmy Thornburg's Sovereign Creator Store - 100% Creator Revenue",
+  "main": "index.html",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo 'No build process needed - static site'",
+    "deploy": "netlify deploy --prod"
+  },
+  "dependencies": {
+    "stripe": "^14.12.0"
+  },
+  "keywords": [
+    "creator-sovereignty",
+    "isbn-free",
+    "independent-publishing",
+    "stripe-payments",
+    "fort-liberation"
+  ],
+  "author": "Jimmy Thornburg <jimmy@thefortthatholds.xyz>",
+  "license": "Fort Creator Liberation License",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JimmyThornburg/jimmy-thornburg-store"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
