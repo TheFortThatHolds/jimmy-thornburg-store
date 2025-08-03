@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful - Jimmy's Store</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Courier New', monospace; 
+            background: #0a0a0a; 
+            color: #00ff41; 
+            line-height: 1.6;
+            padding: 20px;
+            text-align: center;
+        }
+        .success-container {
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 40px;
+            border: 2px solid #00ff41;
+            border-radius: 15px;
+            background: #1a1a1a;
+        }
+        .success-title {
+            color: #40ff80;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+        .success-message {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+        }
+        .download-info {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        .back-button {
+            background: #00ff41;
+            color: #000;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .back-button:hover {
+            background: #40ff80;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-title">🎉 Payment Successful!</div>
+        
+        <div class="success-message">
+            Thank you for supporting creator sovereignty!<br>
+            Your purchase helps keep creators free from corporate gatekeepers.
+        </div>
+        
+        <div class="download-info">
+            <h3>📚 Your Download</h3>
+            <p>Your EPUB file will be delivered to your email within 5 minutes.</p>
+            <p>Check your spam folder if you don't see it.</p>
+            <br>
+            <p><strong>💰 Creator Impact:</strong> 97% of your payment goes directly to Jimmy</p>
+        </div>
+        
+        <button class="back-button" onclick="window.location.href='/'">
+            ← Back to Store
+        </button>
+        
+        <div style="margin-top: 40px; font-size: 0.9em; opacity: 0.8;">
+            <p>Questions? Contact: jimmy@fortthatholds.com</p>
+            <p>Powered by Fort Creator Liberation Platform</p>
+        </div>
+    </div>
+
+    <script>
+        // Get session ID and book ID from URL params
+        const urlParams = new URLSearchParams(window.location.search);
+        const sessionId = urlParams.get('session_id');
+        const bookId = urlParams.get('book_id');
+        
+        console.log('Payment successful for:', bookId, 'Session:', sessionId);
+        
+        // You could add analytics tracking here
+    </script>
+</body>
+</html>
