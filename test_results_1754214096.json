@@ -1,0 +1,67 @@
+{
+  "test_results": {
+    "Store Infrastructure": true,
+    "Payment Processing": true,
+    "Book Catalog": true,
+    "Revenue Potential": true,
+    "Deployment Readiness": true,
+    "Anti-ISBN Compliance": true
+  },
+  "detailed_data": {
+    "store_files": {
+      "index.html": {
+        "exists": true,
+        "size": 16166
+      },
+      "payment-system.js": {
+        "exists": true,
+        "size": 9667
+      },
+      "domain-config.js": {
+        "exists": true,
+        "size": 2141
+      },
+      "deploy-to-domain.md": {
+        "exists": true,
+        "size": 3777
+      }
+    },
+    "payment_system": {
+      "stripe_integration": true,
+      "revenue_calculation": true,
+      "secure_downloads": true,
+      "email_delivery": true,
+      "book_catalog": true
+    },
+    "book_catalog": {
+      "total_books": 14,
+      "total_catalog_value": 255.86,
+      "creator_sovereignty": true,
+      "werner_health": true,
+      "spirallogic": true
+    },
+    "infrastructure": {
+      "conservative_monthly": 174.4571857142857,
+      "conservative_annual": 2093.4862285714285,
+      "moderate_monthly": 872.2859285714286,
+      "moderate_annual": 10467.431142857144,
+      "breakthrough_monthly": 3489.1437142857144,
+      "breakthrough_annual": 41869.724571428575,
+      "deployment": {
+        "deployment_guide": true,
+        "domain_configuration": true,
+        "store_html": true,
+        "payment_system": true,
+        "domain_ready": true
+      },
+      "anti_isbn": {
+        "no_isbn_required": true,
+        "fuck_gatekeepers": true,
+        "creator_sovereignty": true,
+        "100_percent_revenue": true,
+        "anti_platform": true
+      }
+    }
+  },
+  "timestamp": "2025-08-03 02:41:36"
+}

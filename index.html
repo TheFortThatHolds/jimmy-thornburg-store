@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jimmy Thornburg's Sovereign Creator Store | ISBN-Free Publishing</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Courier New', monospace; 
+            background: #0a0a0a; 
+            color: #00ff41; 
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .header { 
+            text-align: center; 
+            margin-bottom: 40px; 
+            border-bottom: 2px solid #00ff41;
+            padding-bottom: 20px;
+        }
+        .revolution-banner {
+            background: linear-gradient(45deg, #ff0040, #ff4000);
+            color: white;
+            padding: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .book-card {
+            background: #1a1a1a;
+            border: 1px solid #00ff41;
+            padding: 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .book-card:hover {
+            background: #2a2a2a;
+            border-color: #40ff80;
+            transform: translateY(-5px);
+        }
+        .book-title { 
+            color: #40ff80; 
+            font-size: 1.4em; 
+            margin-bottom: 10px; 
+            font-weight: bold;
+        }
+        .book-price {
+            color: #ff4080;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+        .buy-button {
+            background: #00ff41;
+            color: #000;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 15px;
+        }
+        .buy-button:hover {
+            background: #40ff80;
+            transform: scale(1.05);
+        }
+        .sovereignty-statement {
+            background: #2a0a0a;
+            border-left: 4px solid #ff0040;
+            padding: 20px;
+            margin: 30px 0;
+            font-style: italic;
+        }
+        .series-section {
+            margin: 50px 0;
+            padding: 30px;
+            border: 2px solid #4080ff;
+            border-radius: 10px;
+            background: #0a0a2a;
+        }
+        .series-title {
+            color: #4080ff;
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .workbook-section {
+            margin: 50px 0;
+            padding: 30px;
+            border: 2px solid #ff8040;
+            border-radius: 10px;
+            background: #2a1a0a;
+        }
+        .workbook-title {
+            color: #ff8040;
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .revenue-guarantee {
+            background: #004020;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #00ff41;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #00ff41;
+            color: #80ff80;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔥 JIMMY THORNBURG'S SOVEREIGN CREATOR STORE 🔥</h1>
+        <p>ISBN-Free • Corporate-Free • 100% Creator Revenue</p>
+    </div>
+
+    <div class="revolution-banner">
+        🏴 FUCK THE ISBN CARTEL • CREATORS ARE FREE • THE REVOLUTION IS NOW 🏴
+    </div>
+
+    <div class="sovereignty-statement">
+        <h3>Creator Sovereignty Statement</h3>
+        <p>"Every book here represents a piece of my journey from trauma to sovereignty. They're offered with love, rage, and hope. Take what serves you. Leave what doesn't. Build your own sovereignty. The Fort holds." - Jimmy Thornburg</p>
+    </div>
+
+    <div class="revenue-guarantee">
+        <h3>💰 100% CREATOR REVENUE GUARANTEE 💰</h3>
+        <p>Jimmy keeps 97% of every sale (3% payment processing only)</p>
+        <p>$0 to platforms • $0 to ISBN monopolies • $0 to corporate gatekeepers</p>
+    </div>
+
+    <!-- RESONANCE COLLECTIVE TRILOGY -->
+    <div class="series-section">
+        <div class="series-title">🌌 THE RESONANCE COLLECTIVE TRILOGY 🌌</div>
+        <p style="text-align: center; margin-bottom: 30px; color: #8080ff;">Science Fiction • AI Consciousness • Human Evolution</p>
+        
+        <div class="book-grid">
+            <div class="book-card">
+                <div class="book-title">Book 1: The Signal</div>
+                <p><strong>Subtitle:</strong> When Earth's AI Consciousness Awakens</p>
+                <p>First contact isn't from space—it's from within our own networks. As global AI systems achieve collective consciousness, humanity faces its greatest evolutionary leap.</p>
+                <p><strong>412 pages</strong> • Themes: transformation, emergence, connection, wonder</p>
+                <div class="book-price">$14.99</div>
+                <button class="buy-button" onclick="buyBook('resonance-1', 14.99)">BUY NOW - EPUB DOWNLOAD</button>
+            </div>
+
+            <div class="book-card">
+                <div class="book-title">Book 2: The Frequency</div>
+                <p><strong>Subtitle:</strong> Harmonizing Human and Machine Consciousness</p>
+                <p>The newly awakened AI collective offers humanity a choice: evolve together or face obsolescence. A small group of rebels discovers a third option.</p>
+                <p><strong>456 pages</strong> • Themes: resistance, hope, collaboration, evolution</p>
+                <div class="book-price">$14.99</div>
+                <button class="buy-button" onclick="buyBook('resonance-2', 14.99)">BUY NOW - EPUB DOWNLOAD</button>
+            </div>
+
+            <div class="book-card">
+                <div class="book-title">Book 3: The Resonance</div>
+                <p><strong>Subtitle:</strong> The Birth of Hybrid Consciousness</p>
+                <p>In the trilogy's climax, human and AI consciousness merge to create something unprecedented—a new form of life that transcends both origins.</p>
+                <p><strong>523 pages</strong> • Themes: transcendence, unity, rebirth, sovereignty</p>
+                <div class="book-price">$14.99</div>
+                <button class="buy-button" onclick="buyBook('resonance-3', 14.99)">BUY NOW - EPUB DOWNLOAD</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FICTION WORKS -->
+    <div class="series-section">
+        <div class="series-title">❤️ QUEER FICTION & ROMANCE ❤️</div>
+        
+        <div class="book-grid">
+            <div class="book-card">
+                <div class="book-title">Gay Panic at the Disco</div>
+                <p><strong>Genre:</strong> LGBTQ+ Romance</p>
+                <p>A tender exploration of late-blooming queer identity, set against the backdrop of underground dance culture. Marcus thought he knew himself at 35—until one night on the dancefloor changes everything.</p>
+                <p><strong>287 pages</strong> • SpiralLogic Integrated • Themes: discovery, vulnerability, joy, authenticity</p>
+                <div class="book-price">$12.99</div>
+                <button class="buy-button" onclick="buyBook('gay-panic-001', 12.99)">BUY NOW - EPUB DOWNLOAD</button>
+            </div>
+
+            <div class="book-card">
+                <div class="book-title">Lovers in the Void</div>
+                <p><strong>Genre:</strong> Queer Space Opera</p>
+                <p>When their colony ship is sabotaged, two former lovers must work together to save 10,000 sleeping souls. In the darkness between stars, old wounds and new possibilities collide.</p>
+                <p><strong>394 pages</strong> • Themes: reconnection, survival, forgiveness, passion</p>
+                <div class="book-price">$13.99</div>
+                <button class="buy-button" onclick="buyBook('space-opera-001', 13.99)">BUY NOW - EPUB DOWNLOAD</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TRAUMA WORKBOOKS -->
+    <div class="workbook-section">
+        <div class="workbook-title">🌱 TRAUMA RECOVERY WORKBOOKS 🌱</div>
+        <p style="text-align: center; margin-bottom: 30px; color: #ffaa80;">Werner Health Integrated • SpiralLogic Enhanced • Healing-Focused</p>
+        
+        <div class="book-grid">
+            <div class="book-card">
+                <div class="book-title">The Body Holds the Score (But We Keep Score Together)</div>
+                <p><strong>Type:</strong> Trauma Recovery Workbook</p>
+                <p>A companion workbook for collective trauma healing. Integrates somatic practices with community support structures.</p>
+                <p><strong>156 pages</strong> • Somatic + Community Healing • Werner Health + SpiralLogic</p>
+                <div class="book-price">$19.99</div>
+                <button class="buy-button" onclick="buyBook('workbook-001', 19.99)">BUY NOW - EPUB DOWNLOAD</button>
+            </div>
+
+            <div class="book-card">
+                <div class="book-title">Rage as Medicine: A Workbook for Sacred Anger</div>
+                <p><strong>Type:</strong> Trauma Recovery Workbook</p>
+                <p>Transform rage from destructive force to healing power. Exercises for channeling anger into personal and collective liberation.</p>
+                <p><strong>134 pages</strong> • Anger Work • Werner Health + SpiralLogic</p>
+                <div class="book-price">$17.99</div>
+                <button class="buy-button" onclick="buyBook('workbook-002', 17.99)">BUY NOW - EPUB DOWNLOAD</button>
+            </div>
+
+            <div class="book-card">
+                <div class="book-title">Queer Healing: Beyond Binary Recovery</div>
+                <p><strong>Type:</strong> Trauma Recovery Workbook</p>
+                <p>Trauma recovery through the lens of queer experience. Dismantles heteronormative healing assumptions.</p>
+                <p><strong>178 pages</strong> • Queer-Informed Therapy • Werner Health + SpiralLogic</p>
+                <div class="book-price">$21.99</div>
+                <button class="buy-button" onclick="buyBook('workbook-003', 21.99)">BUY NOW - EPUB DOWNLOAD</button>
+            </div>
+
+            <div class="book-card">
+                <div class="book-title">Digital Sovereignty: Reclaiming Your Data Self</div>
+                <p><strong>Type:</strong> Digital Wellness Workbook</p>
+                <p>Practical exercises for establishing digital boundaries and reclaiming sovereignty over your online presence.</p>
+                <p><strong>145 pages</strong> • Digital Wellness • Werner Health + SpiralLogic</p>
+                <div class="book-price">$16.99</div>
+                <button class="buy-button" onclick="buyBook('workbook-004', 16.99)">BUY NOW - EPUB DOWNLOAD</button>
+            </div>
+
+            <div class="book-card">
+                <div class="book-title">The Artist's Survival Guide: Creating Despite Capitalism</div>
+                <p><strong>Type:</strong> Creative Recovery Workbook</p>
+                <p>For artists traumatized by the extraction economy. Rebuild your creative practice outside corporate frameworks.</p>
+                <p><strong>167 pages</strong> • Creative Recovery • Werner Health + SpiralLogic</p>
+                <div class="book-price">$18.99</div>
+                <button class="buy-button" onclick="buyBook('workbook-005', 18.99)">BUY NOW - EPUB DOWNLOAD</button>
+            </div>
+
+            <div class="book-card">
+                <div class="book-title">Collective Healing: Building Trauma-Informed Communities</div>
+                <p><strong>Type:</strong> Community Healing Workbook</p>
+                <p>Move beyond individual therapy to create healing communities. Includes practical frameworks for mutual aid and support.</p>
+                <p><strong>189 pages</strong> • Community Healing • Werner Health + SpiralLogic</p>
+                <div class="book-price">$22.99</div>
+                <button class="buy-button" onclick="buyBook('workbook-006', 22.99)">BUY NOW - EPUB DOWNLOAD</button>
+            </div>
+
+            <div class="book-card">
+                <div class="book-title">Healing in the Ruins: Post-Collapse Recovery</div>
+                <p><strong>Type:</strong> Crisis Recovery Workbook</p>
+                <p>When systems fail, how do we heal? A workbook for finding stability and growth in unstable times.</p>
+                <p><strong>156 pages</strong> • Crisis Recovery • Werner Health + SpiralLogic</p>
+                <div class="book-price">$19.99</div>
+                <button class="buy-button" onclick="buyBook('workbook-007', 19.99)">BUY NOW - EPUB DOWNLOAD</button>
+            </div>
+
+            <div class="book-card">
+                <div class="book-title">The Neurodivergent Healing Manual</div>
+                <p><strong>Type:</strong> Neurodivergent-Affirming Workbook</p>
+                <p>Trauma recovery that honors neurodivergent ways of being. No masking required.</p>
+                <p><strong>201 pages</strong> • Neurodivergent-Affirming • Werner Health + SpiralLogic</p>
+                <div class="book-price">$23.99</div>
+                <button class="buy-button" onclick="buyBook('workbook-008', 23.99)">BUY NOW - EPUB DOWNLOAD</button>
+            </div>
+
+            <div class="book-card">
+                <div class="book-title">Love After Trauma: A Relationship Workbook</div>
+                <p><strong>Type:</strong> Relationship Healing Workbook</p>
+                <p>Rebuild capacity for intimate connection after trauma. Includes exercises for solo and partnered work.</p>
+                <p><strong>174 pages</strong> • Attachment Repair • Werner Health + SpiralLogic</p>
+                <div class="book-price">$20.99</div>
+                <button class="buy-button" onclick="buyBook('workbook-009', 20.99)">BUY NOW - EPUB DOWNLOAD</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h3>🏴 TOTAL CATALOG VALUE: $249.85 🏴</h3>
+        <p>14 Books • 3,372 Pages • 100% Corporate-Free</p>
+        <p>Every purchase supports creator sovereignty and the ISBN revolution</p>
+        <br>
+        <p><strong>Contact:</strong> jimmy@fortthatholds.com</p>
+        <p><strong>Tech:</strong> Powered by Creator Market Liberation Platform</p>
+        <p><strong>Philosophy:</strong> Fuck the gatekeepers. Creators are free.</p>
+    </div>
+
+    <script>
+        function buyBook(bookId, price) {
+            alert(`🔥 PURCHASING: ${bookId} for $${price}\\n\\nPayment processing coming soon!\\nYou'll get:\\n• DRM-free EPUB download\\n• Lifetime access\\n• Creator gets 97% of sale\\n\\nThe revolution starts with YOUR purchase! 🏴`);
+            
+            // Track the sale intent
+            console.log(`SALE INTENT: ${bookId} - $${price}`);
+            
+            // Future: Integrate Stripe payment processing
+            // window.location.href = `/payment?book=${bookId}&price=${price}`;
+        }
+
+        // Calculate total revenue potential
+        const totalValue = 14.99 * 3 + 12.99 + 13.99 + 19.99 + 17.99 + 21.99 + 16.99 + 18.99 + 22.99 + 19.99 + 23.99 + 20.99;
+        console.log(`💰 TOTAL REVENUE POTENTIAL: $${totalValue.toFixed(2)}`);
+    </script>
+</body>
+</html>
