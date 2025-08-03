@@ -132,12 +132,12 @@
     </div>
 
     <div class="revolution-banner">
-        🏴 FUCK THE ISBN CARTEL • CREATORS ARE FREE • THE REVOLUTION IS NOW 🏴
+        🏴 INDEPENDENT PUBLISHING • CREATORS ARE FREE • THE REVOLUTION IS NOW 🏴
     </div>
 
     <div class="sovereignty-statement">
         <h3>Creator Sovereignty Statement</h3>
-        <p>"Every book here represents a piece of my journey from trauma to sovereignty. They're offered with love, rage, and hope. Take what serves you. Leave what doesn't. Build your own sovereignty. The Fort holds." - Jimmy Thornburg</p>
+        <p>"Every book here represents a piece of my journey from trauma to sovereignty. They're offered with love, passion, and hope. Take what serves you. Leave what doesn't. Build your own sovereignty. The Fort holds." - Jimmy Thornburg</p>
     </div>
 
     <div class="revenue-guarantee">
@@ -302,18 +302,59 @@
         <br>
         <p><strong>Contact:</strong> jimmy@fortthatholds.com</p>
         <p><strong>Tech:</strong> Powered by Creator Market Liberation Platform</p>
-        <p><strong>Philosophy:</strong> Fuck the gatekeepers. Creators are free.</p>
+        <p><strong>Philosophy:</strong> Independent creators deserve freedom and fair compensation.</p>
     </div>
 
+    <!-- Stripe.js -->
+    <script src="https://js.stripe.com/v3/"></script>
+    
     <script>
+        // Get Stripe key from Netlify environment
+        const stripeKey = window.STRIPE_PUBLISHABLE_KEY || 'pk_live_51QYAlwCgF4kWYHrnAMgAzPJVWjF4VvRCl8KjLVH8LCtyONdvuwlqOY1xGGwn3Wey7BKOXwNx2jk6PYRBv3Z2qHKs00e9HA6kls';
+        const stripe = Stripe(stripeKey);
+
         function buyBook(bookId, price) {
-            alert(`🔥 PURCHASING: ${bookId} for $${price}\\n\\nPayment processing coming soon!\\nYou'll get:\\n• DRM-free EPUB download\\n• Lifetime access\\n• Creator gets 97% of sale\\n\\nThe revolution starts with YOUR purchase! 🏴`);
+            console.log(`🔥 Processing purchase: ${bookId} for $${price}`);
             
-            // Track the sale intent
-            console.log(`SALE INTENT: ${bookId} - $${price}`);
-            
-            // Future: Integrate Stripe payment processing
-            // window.location.href = `/payment?book=${bookId}&price=${price}`;
+            // Create Stripe checkout session
+            createCheckoutSession(bookId, price);
+        }
+
+        async function createCheckoutSession(bookId, price) {
+            try {
+                // Create checkout session
+                const response = await fetch('/.netlify/functions/create-checkout', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        bookId: bookId,
+                        price: price
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Payment session creation failed');
+                }
+                
+                const session = await response.json();
+                
+                // Redirect to Stripe checkout
+                const result = await stripe.redirectToCheckout({
+                    sessionId: session.sessionId
+                });
+                
+                if (result.error) {
+                    console.error('Stripe error:', result.error);
+                    alert('Payment error: ' + result.error.message);
+                }
+                
+            } catch (error) {
+                console.error('Payment error:', error);
+                // Fallback - show contact info
+                alert(`🔥 READY TO PURCHASE: ${bookId} for $${price}\\n\\nPayment processing temporarily unavailable.\\n\\nContact Jimmy directly:\\njimmy@fortthatholds.com`);
+            }
         }
 
         // Calculate total revenue potential
