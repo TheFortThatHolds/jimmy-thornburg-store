@@ -47,7 +47,7 @@ exports.handler = async (event, context) => {
         pages: 523
       },
       'gay-panic-001': {
-        name: 'Gay Panic at the Disco',
+        name: 'Gay Panic',
         subtitle: 'LGBTQ+ Romance',
         price: 12.99,
         pages: 287
