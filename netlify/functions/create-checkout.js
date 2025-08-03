@@ -22,7 +22,9 @@ exports.handler = async (event, context) => {
   }
 
   try {
+    console.log('Function called with body:', event.body);
     const { bookId, price } = JSON.parse(event.body);
+    console.log('Parsed bookId:', bookId, 'price:', price);
 
     // Book catalog for validation and metadata
     const bookCatalog = {
@@ -133,6 +135,7 @@ exports.handler = async (event, context) => {
     const jimmyRevenue = price - stripeFee;
 
     // Create Stripe checkout session
+    console.log('Creating Stripe session for:', book.name);
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       line_items: [
